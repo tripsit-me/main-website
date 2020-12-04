@@ -3,7 +3,7 @@ import { Button, Row, Col } from 'react-bootstrap';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import FormControls from './form-controls';
-import { TextField, TextareaField } from '..';
+import { TextField, TextareaField } from '../fields';
 
 interface Values {
 	nick: string;
@@ -23,7 +23,7 @@ const validationSchema: Yup.ObjectSchema<Values> = Yup.object().shape({
 
 const ContactUsBanAppeals: React.FC = () => {
 	async function handleSubmit(values: Values) {
-		console.log(values);
+		console.info(values);
 	}
 
 	return (
